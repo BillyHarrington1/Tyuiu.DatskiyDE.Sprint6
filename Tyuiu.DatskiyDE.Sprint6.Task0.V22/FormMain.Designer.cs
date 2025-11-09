@@ -135,7 +135,7 @@
             Controls.Add(groupBoxCondition_DDE);
             Margin = new Padding(4, 3, 4, 3);
             Name = "FormMain_DDE";
-            Text = "Спринт #6 | Выполнил: Дацкий Д. Е. | ИСПб-25-1";
+            Text = "Спринт 6 | Таск 0 | Вариант 22 | Дацкий Д. Е. ";
             groupBoxCondition_DDE.ResumeLayout(false);
             groupBoxCondition_DDE.PerformLayout();
             groupBoxInput_DDE.ResumeLayout(false);
