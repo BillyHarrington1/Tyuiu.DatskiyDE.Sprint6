@@ -18,7 +18,7 @@ namespace Tyuiu.DatskiyDE.Sprint6.Task0.V22
 
             try
             {
-                int x = int.Parse(textBoxX.Text); // предположим, у тебя есть TextBox для X
+                int x = int.Parse(textBoxX.Text); 
                 double result = ds.Calculate(x);
                 textBoxResult.Text = result.ToString("F3");
             }
@@ -26,6 +26,11 @@ namespace Tyuiu.DatskiyDE.Sprint6.Task0.V22
             {
                 MessageBox.Show("Ошибка ввода данных!");
             }
+        }
+
+        private void labelFormula_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
