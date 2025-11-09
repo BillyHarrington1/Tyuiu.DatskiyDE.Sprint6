@@ -41,6 +41,7 @@
             dataGridViewResult_DDE = new DataGridView();
             dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
+            cartesianChart1 = new LiveCharts.WinForms.CartesianChart();
             groupBoxCondition_DDE.SuspendLayout();
             groupBoxInput_DDE.SuspendLayout();
             groupBoxOutput_DDE.SuspendLayout();
@@ -179,11 +180,20 @@
             dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             dataGridViewTextBoxColumn2.Width = 80;
             // 
+            // cartesianChart1
+            // 
+            cartesianChart1.Location = new Point(35, 263);
+            cartesianChart1.Name = "cartesianChart1";
+            cartesianChart1.Size = new Size(867, 146);
+            cartesianChart1.TabIndex = 3;
+            cartesianChart1.Text = "cartesianChart1";
+            // 
             // FormMain
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(928, 328);
+            ClientSize = new Size(928, 421);
+            Controls.Add(cartesianChart1);
             Controls.Add(groupBoxOutput_DDE);
             Controls.Add(groupBoxInput_DDE);
             Controls.Add(groupBoxCondition_DDE);
@@ -215,5 +225,6 @@
         private System.Windows.Forms.DataGridView dataGridViewResult_DDE;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private LiveCharts.WinForms.CartesianChart cartesianChart1;
     }
 }
