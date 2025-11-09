@@ -28,10 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-                 
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+
             this.groupBoxCondition_DDE = new System.Windows.Forms.GroupBox();
             this.labelFormula_DDE = new System.Windows.Forms.Label();
             this.groupBoxInput_DDE = new System.Windows.Forms.GroupBox();
@@ -45,7 +42,6 @@
             this.dataGridViewResult_DDE = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.chartResult_DDE = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.SuspendLayout();
             // 
             // groupBoxCondition_DDE
@@ -138,7 +134,6 @@
             // groupBoxOutput_DDE
             // 
             this.groupBoxOutput_DDE.Controls.Add(this.dataGridViewResult_DDE);
-            this.groupBoxOutput_DDE.Controls.Add(this.chartResult_DDE);
             this.groupBoxOutput_DDE.Location = new System.Drawing.Point(30, 220);
             this.groupBoxOutput_DDE.Name = "groupBoxOutput_DDE";
             this.groupBoxOutput_DDE.Size = new System.Drawing.Size(740, 200);
@@ -169,22 +164,6 @@
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.Width = 80;
             // 
-            // chartResult_DDE
-            // 
-            chartArea1.Name = "ChartArea1";
-            this.chartResult_DDE.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chartResult_DDE.Legends.Add(legend1);
-            this.chartResult_DDE.Location = new System.Drawing.Point(350, 30);
-            this.chartResult_DDE.Name = "chartResult_DDE";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chartResult_DDE.Series.Add(series1);
-            this.chartResult_DDE.Size = new System.Drawing.Size(350, 150);
-            this.chartResult_DDE.TabIndex = 1;
-            this.chartResult_DDE.Text = "chart1";
-            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -194,7 +173,7 @@
             this.Controls.Add(this.groupBoxInput_DDE);
             this.Controls.Add(this.groupBoxCondition_DDE);
             this.Name = "FormMain";
-            this.Text = "Спринт 6 | Task 2 | Вариант 7 | Дацкий Д. Е.";
+            this.Text = "Спринт 6 | Таск 2 | Вариант 7 | Дацкий Д. Е.";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -215,6 +194,5 @@
         private System.Windows.Forms.DataGridView dataGridViewResult_DDE;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chartResult_DDE;
     }
 }
