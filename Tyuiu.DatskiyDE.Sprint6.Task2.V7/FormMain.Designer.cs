@@ -28,154 +28,175 @@
         /// </summary>
         private void InitializeComponent()
         {
-
-            this.groupBoxCondition_DDE = new System.Windows.Forms.GroupBox();
-            this.labelFormula_DDE = new System.Windows.Forms.Label();
-            this.groupBoxInput_DDE = new System.Windows.Forms.GroupBox();
-            this.labelStart_DDE = new System.Windows.Forms.Label();
-            this.textBoxStart_DDE = new System.Windows.Forms.TextBox();
-            this.labelStop_DDE = new System.Windows.Forms.Label();
-            this.textBoxStop_DDE = new System.Windows.Forms.TextBox();
-            this.buttonHelp_DDE = new System.Windows.Forms.Button();
-            this.buttonCalculate_DDE = new System.Windows.Forms.Button();
-            this.groupBoxOutput_DDE = new System.Windows.Forms.GroupBox();
-            this.dataGridViewResult_DDE = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SuspendLayout();
+            groupBoxCondition_DDE = new GroupBox();
+            labelFormula_DDE = new Label();
+            groupBoxInput_DDE = new GroupBox();
+            labelStart_DDE = new Label();
+            textBoxStart_DDE = new TextBox();
+            labelStop_DDE = new Label();
+            textBoxStop_DDE = new TextBox();
+            buttonHelp_DDE = new Button();
+            buttonCalculate_DDE = new Button();
+            groupBoxOutput_DDE = new GroupBox();
+            dataGridViewResult_DDE = new DataGridView();
+            dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
+            groupBoxCondition_DDE.SuspendLayout();
+            groupBoxInput_DDE.SuspendLayout();
+            groupBoxOutput_DDE.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewResult_DDE).BeginInit();
+            SuspendLayout();
             // 
             // groupBoxCondition_DDE
             // 
-            this.groupBoxCondition_DDE.Controls.Add(this.labelFormula_DDE);
-            this.groupBoxCondition_DDE.Location = new System.Drawing.Point(30, 20);
-            this.groupBoxCondition_DDE.Name = "groupBoxCondition_DDE";
-            this.groupBoxCondition_DDE.Size = new System.Drawing.Size(740, 80);
-            this.groupBoxCondition_DDE.TabIndex = 0;
-            this.groupBoxCondition_DDE.TabStop = false;
-            this.groupBoxCondition_DDE.Text = "Условие";
+            groupBoxCondition_DDE.Controls.Add(labelFormula_DDE);
+            groupBoxCondition_DDE.Location = new Point(35, 23);
+            groupBoxCondition_DDE.Margin = new Padding(4, 3, 4, 3);
+            groupBoxCondition_DDE.Name = "groupBoxCondition_DDE";
+            groupBoxCondition_DDE.Padding = new Padding(4, 3, 4, 3);
+            groupBoxCondition_DDE.Size = new Size(409, 92);
+            groupBoxCondition_DDE.TabIndex = 0;
+            groupBoxCondition_DDE.TabStop = false;
+            groupBoxCondition_DDE.Text = "Условие";
             // 
             // labelFormula_DDE
             // 
-            this.labelFormula_DDE.AutoSize = true;
-            this.labelFormula_DDE.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelFormula_DDE.Location = new System.Drawing.Point(30, 30);
-            this.labelFormula_DDE.Name = "labelFormula_DDE";
-            this.labelFormula_DDE.Size = new System.Drawing.Size(300, 20);
-            this.labelFormula_DDE.TabIndex = 0;
-            this.labelFormula_DDE.Text = "F(x) = 3x + 2 - (2x - x)/(cos(x) + 1)";
+            labelFormula_DDE.AutoSize = true;
+            labelFormula_DDE.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            labelFormula_DDE.Location = new Point(35, 35);
+            labelFormula_DDE.Margin = new Padding(4, 0, 4, 0);
+            labelFormula_DDE.Name = "labelFormula_DDE";
+            labelFormula_DDE.Size = new Size(236, 20);
+            labelFormula_DDE.TabIndex = 0;
+            labelFormula_DDE.Text = "F(x) = 3x + 2 - (2x - x)/(cos(x) + 1)";
             // 
             // groupBoxInput_DDE
             // 
-            this.groupBoxInput_DDE.Controls.Add(this.labelStart_DDE);
-            this.groupBoxInput_DDE.Controls.Add(this.textBoxStart_DDE);
-            this.groupBoxInput_DDE.Controls.Add(this.labelStop_DDE);
-            this.groupBoxInput_DDE.Controls.Add(this.textBoxStop_DDE);
-            this.groupBoxInput_DDE.Controls.Add(this.buttonHelp_DDE);
-            this.groupBoxInput_DDE.Controls.Add(this.buttonCalculate_DDE);
-            this.groupBoxInput_DDE.Location = new System.Drawing.Point(30, 110);
-            this.groupBoxInput_DDE.Name = "groupBoxInput_DDE";
-            this.groupBoxInput_DDE.Size = new System.Drawing.Size(740, 100);
-            this.groupBoxInput_DDE.TabIndex = 1;
-            this.groupBoxInput_DDE.TabStop = false;
-            this.groupBoxInput_DDE.Text = "Ввод данных";
+            groupBoxInput_DDE.Controls.Add(labelStart_DDE);
+            groupBoxInput_DDE.Controls.Add(textBoxStart_DDE);
+            groupBoxInput_DDE.Controls.Add(labelStop_DDE);
+            groupBoxInput_DDE.Controls.Add(textBoxStop_DDE);
+            groupBoxInput_DDE.Controls.Add(buttonHelp_DDE);
+            groupBoxInput_DDE.Controls.Add(buttonCalculate_DDE);
+            groupBoxInput_DDE.Location = new Point(35, 127);
+            groupBoxInput_DDE.Margin = new Padding(4, 3, 4, 3);
+            groupBoxInput_DDE.Name = "groupBoxInput_DDE";
+            groupBoxInput_DDE.Padding = new Padding(4, 3, 4, 3);
+            groupBoxInput_DDE.Size = new Size(409, 115);
+            groupBoxInput_DDE.TabIndex = 1;
+            groupBoxInput_DDE.TabStop = false;
+            groupBoxInput_DDE.Text = "Ввод данных";
             // 
             // labelStart_DDE
             // 
-            this.labelStart_DDE.AutoSize = true;
-            this.labelStart_DDE.Location = new System.Drawing.Point(30, 30);
-            this.labelStart_DDE.Name = "labelStart_DDE";
-            this.labelStart_DDE.Size = new System.Drawing.Size(65, 13);
-            this.labelStart_DDE.TabIndex = 0;
-            this.labelStart_DDE.Text = "Старт шага:";
+            labelStart_DDE.AutoSize = true;
+            labelStart_DDE.Location = new Point(35, 35);
+            labelStart_DDE.Margin = new Padding(4, 0, 4, 0);
+            labelStart_DDE.Name = "labelStart_DDE";
+            labelStart_DDE.Size = new Size(72, 15);
+            labelStart_DDE.TabIndex = 0;
+            labelStart_DDE.Text = "Старт шага:";
             // 
             // textBoxStart_DDE
             // 
-            this.textBoxStart_DDE.Location = new System.Drawing.Point(100, 27);
-            this.textBoxStart_DDE.Name = "textBoxStart_DDE";
-            this.textBoxStart_DDE.Size = new System.Drawing.Size(100, 20);
-            this.textBoxStart_DDE.TabIndex = 1;
+            textBoxStart_DDE.Location = new Point(117, 31);
+            textBoxStart_DDE.Margin = new Padding(4, 3, 4, 3);
+            textBoxStart_DDE.Name = "textBoxStart_DDE";
+            textBoxStart_DDE.Size = new Size(116, 23);
+            textBoxStart_DDE.TabIndex = 1;
             // 
             // labelStop_DDE
             // 
-            this.labelStop_DDE.AutoSize = true;
-            this.labelStop_DDE.Location = new System.Drawing.Point(30, 60);
-            this.labelStop_DDE.Name = "labelStop_DDE";
-            this.labelStop_DDE.Size = new System.Drawing.Size(65, 13);
-            this.labelStop_DDE.TabIndex = 2;
-            this.labelStop_DDE.Text = "Конец шага:";
+            labelStop_DDE.AutoSize = true;
+            labelStop_DDE.Location = new Point(35, 69);
+            labelStop_DDE.Margin = new Padding(4, 0, 4, 0);
+            labelStop_DDE.Name = "labelStop_DDE";
+            labelStop_DDE.Size = new Size(75, 15);
+            labelStop_DDE.TabIndex = 2;
+            labelStop_DDE.Text = "Конец шага:";
             // 
             // textBoxStop_DDE
             // 
-            this.textBoxStop_DDE.Location = new System.Drawing.Point(100, 57);
-            this.textBoxStop_DDE.Name = "textBoxStop_DDE";
-            this.textBoxStop_DDE.Size = new System.Drawing.Size(100, 20);
-            this.textBoxStop_DDE.TabIndex = 3;
+            textBoxStop_DDE.Location = new Point(117, 66);
+            textBoxStop_DDE.Margin = new Padding(4, 3, 4, 3);
+            textBoxStop_DDE.Name = "textBoxStop_DDE";
+            textBoxStop_DDE.Size = new Size(116, 23);
+            textBoxStop_DDE.TabIndex = 3;
             // 
             // buttonHelp_DDE
             // 
-            this.buttonHelp_DDE.Location = new System.Drawing.Point(220, 27);
-            this.buttonHelp_DDE.Name = "buttonHelp_DDE";
-            this.buttonHelp_DDE.Size = new System.Drawing.Size(80, 23);
-            this.buttonHelp_DDE.TabIndex = 4;
-            this.buttonHelp_DDE.Text = "Справка";
-            this.buttonHelp_DDE.UseVisualStyleBackColor = true;
-            this.buttonHelp_DDE.Click += new System.EventHandler(this.buttonHelp_DDE_Click);
+            buttonHelp_DDE.Location = new Point(257, 31);
+            buttonHelp_DDE.Margin = new Padding(4, 3, 4, 3);
+            buttonHelp_DDE.Name = "buttonHelp_DDE";
+            buttonHelp_DDE.Size = new Size(93, 27);
+            buttonHelp_DDE.TabIndex = 4;
+            buttonHelp_DDE.Text = "Справка";
+            buttonHelp_DDE.UseVisualStyleBackColor = true;
+            buttonHelp_DDE.Click += buttonHelp_DDE_Click;
             // 
             // buttonCalculate_DDE
             // 
-            this.buttonCalculate_DDE.Location = new System.Drawing.Point(220, 57);
-            this.buttonCalculate_DDE.Name = "buttonCalculate_DDE";
-            this.buttonCalculate_DDE.Size = new System.Drawing.Size(80, 23);
-            this.buttonCalculate_DDE.TabIndex = 5;
-            this.buttonCalculate_DDE.Text = "Выполнить";
-            this.buttonCalculate_DDE.UseVisualStyleBackColor = true;
-            this.buttonCalculate_DDE.Click += new System.EventHandler(this.buttonCalculate_DDE_Click);
+            buttonCalculate_DDE.Location = new Point(257, 66);
+            buttonCalculate_DDE.Margin = new Padding(4, 3, 4, 3);
+            buttonCalculate_DDE.Name = "buttonCalculate_DDE";
+            buttonCalculate_DDE.Size = new Size(93, 27);
+            buttonCalculate_DDE.TabIndex = 5;
+            buttonCalculate_DDE.Text = "Выполнить";
+            buttonCalculate_DDE.UseVisualStyleBackColor = true;
+            buttonCalculate_DDE.Click += buttonCalculate_DDE_Click;
             // 
             // groupBoxOutput_DDE
             // 
-            this.groupBoxOutput_DDE.Controls.Add(this.dataGridViewResult_DDE);
-            this.groupBoxOutput_DDE.Location = new System.Drawing.Point(30, 220);
-            this.groupBoxOutput_DDE.Name = "groupBoxOutput_DDE";
-            this.groupBoxOutput_DDE.Size = new System.Drawing.Size(740, 200);
-            this.groupBoxOutput_DDE.TabIndex = 2;
-            this.groupBoxOutput_DDE.TabStop = false;
-            this.groupBoxOutput_DDE.Text = "Вывод данных";
+            groupBoxOutput_DDE.Controls.Add(dataGridViewResult_DDE);
+            groupBoxOutput_DDE.Location = new Point(465, 23);
+            groupBoxOutput_DDE.Margin = new Padding(4, 3, 4, 3);
+            groupBoxOutput_DDE.Name = "groupBoxOutput_DDE";
+            groupBoxOutput_DDE.Padding = new Padding(4, 3, 4, 3);
+            groupBoxOutput_DDE.Size = new Size(437, 219);
+            groupBoxOutput_DDE.TabIndex = 2;
+            groupBoxOutput_DDE.TabStop = false;
+            groupBoxOutput_DDE.Text = "Вывод данных";
             // 
             // dataGridViewResult_DDE
             // 
-            this.dataGridViewResult_DDE.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewResult_DDE.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2});
-            this.dataGridViewResult_DDE.Location = new System.Drawing.Point(30, 30);
-            this.dataGridViewResult_DDE.Name = "dataGridViewResult_DDE";
-            this.dataGridViewResult_DDE.Size = new System.Drawing.Size(300, 150);
-            this.dataGridViewResult_DDE.TabIndex = 0;
+            dataGridViewResult_DDE.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewResult_DDE.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2 });
+            dataGridViewResult_DDE.Location = new Point(143, 35);
+            dataGridViewResult_DDE.Margin = new Padding(4, 3, 4, 3);
+            dataGridViewResult_DDE.Name = "dataGridViewResult_DDE";
+            dataGridViewResult_DDE.Size = new Size(172, 173);
+            dataGridViewResult_DDE.TabIndex = 0;
             // 
             // dataGridViewTextBoxColumn1
             // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "X";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Width = 50;
+            dataGridViewTextBoxColumn1.HeaderText = "X";
+            dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            dataGridViewTextBoxColumn1.Width = 50;
             // 
             // dataGridViewTextBoxColumn2
             // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "F(X)";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Width = 80;
+            dataGridViewTextBoxColumn2.HeaderText = "F(X)";
+            dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            dataGridViewTextBoxColumn2.Width = 80;
             // 
             // FormMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.groupBoxOutput_DDE);
-            this.Controls.Add(this.groupBoxInput_DDE);
-            this.Controls.Add(this.groupBoxCondition_DDE);
-            this.Name = "FormMain";
-            this.Text = "Спринт 6 | Таск 2 | Вариант 7 | Дацкий Д. Е.";
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(928, 328);
+            Controls.Add(groupBoxOutput_DDE);
+            Controls.Add(groupBoxInput_DDE);
+            Controls.Add(groupBoxCondition_DDE);
+            Margin = new Padding(4, 3, 4, 3);
+            Name = "FormMain";
+            Text = "Спринт 6 | Таск 2 | Вариант 7 | Дацкий Д. Е.";
+            groupBoxCondition_DDE.ResumeLayout(false);
+            groupBoxCondition_DDE.PerformLayout();
+            groupBoxInput_DDE.ResumeLayout(false);
+            groupBoxInput_DDE.PerformLayout();
+            groupBoxOutput_DDE.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridViewResult_DDE).EndInit();
+            ResumeLayout(false);
 
         }
 

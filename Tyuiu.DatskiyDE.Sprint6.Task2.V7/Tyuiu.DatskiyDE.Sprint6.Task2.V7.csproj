@@ -9,6 +9,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="ProEssentials.Chart.Net80.x64.Winforms" Version="10.0.0.14" />
+    <PackageReference Include="Steema.TeeChart.NET" Version="4.2025.7.7" />
+    <PackageReference Include="Vizor.ECharts.Net80" Version="0.10.6" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Tyuiu.DatskiyDE.Sprint6.Task2.V7.Lib\Tyuiu.DatskiyDE.Sprint6.Task2.V7.Lib.csproj" />
   </ItemGroup>
 
