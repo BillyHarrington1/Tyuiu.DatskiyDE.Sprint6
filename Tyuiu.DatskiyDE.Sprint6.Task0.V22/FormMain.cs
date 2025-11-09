@@ -5,9 +5,9 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Tyuiu.DatskiyDE.Sprint6.Task0.V22
 {
-    public partial class FormMain : Form
+    public partial class FormMain_DDE : Form
     {
-        public FormMain()
+        public FormMain_DDE()
         {
             InitializeComponent();
         }
@@ -18,9 +18,9 @@ namespace Tyuiu.DatskiyDE.Sprint6.Task0.V22
 
             try
             {
-                int x = int.Parse(textBoxX.Text); 
+                int x = int.Parse(textBoxInput_DDE.Text); 
                 double result = ds.Calculate(x);
-                textBoxResult.Text = result.ToString("F3");
+                textBoxResult_DDE.Text = result.ToString("F3");
             }
             catch (Exception ex)
             {
