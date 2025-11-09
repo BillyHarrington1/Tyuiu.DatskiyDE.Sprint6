@@ -23,9 +23,9 @@ namespace Tyuiu.DatskiyDE.Sprint6.Task1.V2
 
                 double[] values = ds.GetMassFunction(startValue, stopValue);
 
-                string result = "+-----+--------+\n";
-                result += "|  X  |  f(x)  |\n";
-                result += "+-----+--------+\n";
+                string result = "+------------------------+-----------------------+\n";
+                result += "|     X      |    f(x)    |\n";
+                result += "+------------------------+-----------------------+\n";
 
                 for (int i = 0; i < values.Length; i++)
                 {
@@ -33,7 +33,7 @@ namespace Tyuiu.DatskiyDE.Sprint6.Task1.V2
                     result += $"| {x,3} | {values[i],6:F2} |\n";
                 }
 
-                result += "+-----+--------+";
+                result += "+------------------------+-----------------------+";
 
                 richTextBoxResult.Text = result;
             }
@@ -45,7 +45,7 @@ namespace Tyuiu.DatskiyDE.Sprint6.Task1.V2
 
         private void buttonHelp_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Протабулировать функцию F(x) = (5x + 2.5)/(sin(x) + 2) + 2x + 2\nна диапазоне [-5, 5] с шагом 1.");
+            MessageBox.Show("Протабулировать функцию F(x) = (5x + 2.5)/(sin(x) + 2) + 2x + 2 на диапазоне [-5, 5] с шагом 1.");
         }
     }
 }
