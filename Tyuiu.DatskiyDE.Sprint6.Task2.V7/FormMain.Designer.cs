@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             groupBoxCondition_DDE = new GroupBox();
             labelFormula_DDE = new Label();
             groupBoxInput_DDE = new GroupBox();
@@ -41,11 +44,12 @@
             dataGridViewResult_DDE = new DataGridView();
             dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
-            cartesianChart1 = new LiveCharts.WinForms.CartesianChart();
+            chart_DDE = new System.Windows.Forms.DataVisualization.Charting.Chart();
             groupBoxCondition_DDE.SuspendLayout();
             groupBoxInput_DDE.SuspendLayout();
             groupBoxOutput_DDE.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewResult_DDE).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)chart_DDE).BeginInit();
             SuspendLayout();
             // 
             // groupBoxCondition_DDE
@@ -180,20 +184,31 @@
             dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             dataGridViewTextBoxColumn2.Width = 80;
             // 
-            // cartesianChart1
+            // chart_DDE
             // 
-            cartesianChart1.Location = new Point(35, 263);
-            cartesianChart1.Name = "cartesianChart1";
-            cartesianChart1.Size = new Size(867, 146);
-            cartesianChart1.TabIndex = 3;
-            cartesianChart1.Text = "cartesianChart1";
+            chart_DDE.AccessibleName = "";
+            chartArea1.Name = "ChartArea1";
+            chart_DDE.ChartAreas.Add(chartArea1);
+            chart_DDE.ImeMode = ImeMode.Off;
+            legend1.Name = "Legend1";
+            chart_DDE.Legends.Add(legend1);
+            chart_DDE.Location = new Point(35, 260);
+            chart_DDE.Name = "chart_DDE";
+            chart_DDE.RightToLeft = RightToLeft.No;
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            chart_DDE.Series.Add(series1);
+            chart_DDE.Size = new Size(867, 164);
+            chart_DDE.TabIndex = 2;
+            chart_DDE.Text = "chart";
             // 
             // FormMain
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(928, 421);
-            Controls.Add(cartesianChart1);
+            Controls.Add(chart_DDE);
             Controls.Add(groupBoxOutput_DDE);
             Controls.Add(groupBoxInput_DDE);
             Controls.Add(groupBoxCondition_DDE);
@@ -206,6 +221,7 @@
             groupBoxInput_DDE.PerformLayout();
             groupBoxOutput_DDE.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridViewResult_DDE).EndInit();
+            ((System.ComponentModel.ISupportInitialize)chart_DDE).EndInit();
             ResumeLayout(false);
 
         }
@@ -225,6 +241,6 @@
         private System.Windows.Forms.DataGridView dataGridViewResult_DDE;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private LiveCharts.WinForms.CartesianChart cartesianChart1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart_DDE;
     }
 }

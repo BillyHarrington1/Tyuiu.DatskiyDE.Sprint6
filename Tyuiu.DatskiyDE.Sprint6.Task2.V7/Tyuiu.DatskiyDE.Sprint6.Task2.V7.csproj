@@ -13,6 +13,7 @@
     <PackageReference Include="LiveCharts.WinForms.NetCore3" Version="0.9.8" />
     <PackageReference Include="Syncfusion.SfChart.WPF" Version="31.2.5" />
     <PackageReference Include="Vizor.ECharts.Net80" Version="0.10.6" />
+    <PackageReference Include="WinForms.DataVisualization" Version="1.10.0" />
   </ItemGroup>
 
   <ItemGroup>
