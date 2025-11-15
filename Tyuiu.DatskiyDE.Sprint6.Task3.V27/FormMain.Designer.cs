@@ -29,11 +29,12 @@
         private void InitializeComponent()
         {
             groupBoxCondition_DDE = new GroupBox();
-            labelMatrix_DDE = new Label();
+            textBoxTask_DDE = new TextBox();
             groupBoxInput_DDE = new GroupBox();
             buttonHelp_DDE = new Button();
             buttonCalculate_DDE = new Button();
             groupBoxOutput_DDE = new GroupBox();
+            textBoxResult_DDE = new TextBox();
             dataGridViewResult_DDE = new DataGridView();
             groupBoxCondition_DDE.SuspendLayout();
             groupBoxInput_DDE.SuspendLayout();
@@ -43,111 +44,138 @@
             // 
             // groupBoxCondition_DDE
             // 
-            groupBoxCondition_DDE.Controls.Add(labelMatrix_DDE);
-            groupBoxCondition_DDE.Location = new Point(35, 23);
-            groupBoxCondition_DDE.Margin = new Padding(4, 3, 4, 3);
+            groupBoxCondition_DDE.BackColor = SystemColors.ActiveCaption;
+            groupBoxCondition_DDE.Controls.Add(textBoxTask_DDE);
+            groupBoxCondition_DDE.Location = new Point(12, 12);
             groupBoxCondition_DDE.Name = "groupBoxCondition_DDE";
-            groupBoxCondition_DDE.Padding = new Padding(4, 3, 4, 3);
-            groupBoxCondition_DDE.Size = new Size(863, 92);
+            groupBoxCondition_DDE.Size = new Size(510, 102);
             groupBoxCondition_DDE.TabIndex = 0;
             groupBoxCondition_DDE.TabStop = false;
             groupBoxCondition_DDE.Text = "Условие";
             // 
-            // labelMatrix_DDE
+            // textBoxTask_DDE
             // 
-            labelMatrix_DDE.AutoSize = true;
-            labelMatrix_DDE.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            labelMatrix_DDE.Location = new Point(35, 35);
-            labelMatrix_DDE.Margin = new Padding(4, 0, 4, 0);
-            labelMatrix_DDE.Name = "labelMatrix_DDE";
-            labelMatrix_DDE.Size = new Size(482, 40);
-            labelMatrix_DDE.TabIndex = 0;
-            labelMatrix_DDE.Text = "Дан массив 5 на 5 элементов.\nВыполнить сортировку по возрастанию в четвёртом столбце.";
+            textBoxTask_DDE.BackColor = SystemColors.ActiveCaption;
+            textBoxTask_DDE.BorderStyle = BorderStyle.None;
+            textBoxTask_DDE.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            textBoxTask_DDE.Location = new Point(6, 22);
+            textBoxTask_DDE.Multiline = true;
+            textBoxTask_DDE.Name = "textBoxTask_DDE";
+            textBoxTask_DDE.ReadOnly = true;
+            textBoxTask_DDE.Size = new Size(498, 52);
+            textBoxTask_DDE.TabIndex = 0;
+            textBoxTask_DDE.Text = "Дан массив 5 на 5 элементов. Выполнить сортировку по возрастанию в четвертом столбце.";
             // 
             // groupBoxInput_DDE
             // 
+            groupBoxInput_DDE.BackColor = SystemColors.ActiveCaption;
             groupBoxInput_DDE.Controls.Add(buttonHelp_DDE);
             groupBoxInput_DDE.Controls.Add(buttonCalculate_DDE);
-            groupBoxInput_DDE.Location = new Point(35, 127);
-            groupBoxInput_DDE.Margin = new Padding(4, 3, 4, 3);
+            groupBoxInput_DDE.Location = new Point(12, 98);
             groupBoxInput_DDE.Name = "groupBoxInput_DDE";
-            groupBoxInput_DDE.Padding = new Padding(4, 3, 4, 3);
-            groupBoxInput_DDE.Size = new Size(863, 115);
+            groupBoxInput_DDE.Size = new Size(510, 92);
             groupBoxInput_DDE.TabIndex = 1;
             groupBoxInput_DDE.TabStop = false;
-            groupBoxInput_DDE.Text = "Ввод данных";
+            groupBoxInput_DDE.Text = "-..-";
             // 
             // buttonHelp_DDE
             // 
-            buttonHelp_DDE.Location = new Point(183, 33);
-            buttonHelp_DDE.Margin = new Padding(4, 3, 4, 3);
+            buttonHelp_DDE.BackColor = SystemColors.ButtonHighlight;
+            buttonHelp_DDE.Location = new Point(6, 16);
             buttonHelp_DDE.Name = "buttonHelp_DDE";
-            buttonHelp_DDE.Size = new Size(93, 27);
-            buttonHelp_DDE.TabIndex = 0;
+            buttonHelp_DDE.Size = new Size(249, 64);
+            buttonHelp_DDE.TabIndex = 1;
             buttonHelp_DDE.Text = "Справка";
-            buttonHelp_DDE.UseVisualStyleBackColor = true;
+            buttonHelp_DDE.UseVisualStyleBackColor = false;
             buttonHelp_DDE.Click += buttonHelp_DDE_Click;
+            buttonHelp_DDE.MouseEnter += buttonHelp_DDE_MouseEnter;
+            buttonHelp_DDE.MouseLeave += buttonHelp_DDE_MouseLeave;
             // 
             // buttonCalculate_DDE
             // 
-            buttonCalculate_DDE.Location = new Point(183, 66);
-            buttonCalculate_DDE.Margin = new Padding(4, 3, 4, 3);
+            buttonCalculate_DDE.BackColor = SystemColors.Control;
+            buttonCalculate_DDE.Location = new Point(261, 16);
             buttonCalculate_DDE.Name = "buttonCalculate_DDE";
-            buttonCalculate_DDE.Size = new Size(93, 27);
-            buttonCalculate_DDE.TabIndex = 1;
+            buttonCalculate_DDE.Size = new Size(243, 64);
+            buttonCalculate_DDE.TabIndex = 0;
             buttonCalculate_DDE.Text = "Выполнить";
-            buttonCalculate_DDE.UseVisualStyleBackColor = true;
+            buttonCalculate_DDE.UseVisualStyleBackColor = false;
             buttonCalculate_DDE.Click += buttonCalculate_DDE_Click;
+            buttonCalculate_DDE.MouseEnter += buttonCalculate_DDE_MouseEnter;
+            buttonCalculate_DDE.MouseLeave += buttonCalculate_DDE_MouseLeave;
             // 
             // groupBoxOutput_DDE
             // 
+            groupBoxOutput_DDE.BackColor = SystemColors.ActiveCaption;
+            groupBoxOutput_DDE.Controls.Add(textBoxResult_DDE);
             groupBoxOutput_DDE.Controls.Add(dataGridViewResult_DDE);
-            groupBoxOutput_DDE.Location = new Point(35, 254);
-            groupBoxOutput_DDE.Margin = new Padding(4, 3, 4, 3);
+            groupBoxOutput_DDE.Location = new Point(12, 184);
             groupBoxOutput_DDE.Name = "groupBoxOutput_DDE";
-            groupBoxOutput_DDE.Padding = new Padding(4, 3, 4, 3);
-            groupBoxOutput_DDE.Size = new Size(863, 231);
+            groupBoxOutput_DDE.Size = new Size(510, 250);
             groupBoxOutput_DDE.TabIndex = 2;
             groupBoxOutput_DDE.TabStop = false;
             groupBoxOutput_DDE.Text = "Вывод данных";
             // 
+            // textBoxResult_DDE
+            // 
+            textBoxResult_DDE.BackColor = SystemColors.ActiveCaption;
+            textBoxResult_DDE.BorderStyle = BorderStyle.FixedSingle;
+            textBoxResult_DDE.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            textBoxResult_DDE.Location = new Point(6, 221);
+            textBoxResult_DDE.Name = "textBoxResult_DDE";
+            textBoxResult_DDE.ReadOnly = true;
+            textBoxResult_DDE.Size = new Size(498, 23);
+            textBoxResult_DDE.TabIndex = 1;
+            textBoxResult_DDE.TextAlign = HorizontalAlignment.Center;
+            // 
             // dataGridViewResult_DDE
             // 
+            dataGridViewResult_DDE.AllowUserToAddRows = false;
+            dataGridViewResult_DDE.AllowUserToDeleteRows = false;
+            dataGridViewResult_DDE.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewResult_DDE.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewResult_DDE.Location = new Point(35, 35);
-            dataGridViewResult_DDE.Margin = new Padding(4, 3, 4, 3);
+            dataGridViewResult_DDE.ColumnHeadersVisible = false;
+            dataGridViewResult_DDE.Location = new Point(6, 22);
             dataGridViewResult_DDE.Name = "dataGridViewResult_DDE";
-            dataGridViewResult_DDE.Size = new Size(350, 173);
+            dataGridViewResult_DDE.ReadOnly = true;
+            dataGridViewResult_DDE.RowHeadersVisible = false;
+            dataGridViewResult_DDE.Size = new Size(498, 180);
             dataGridViewResult_DDE.TabIndex = 0;
             // 
             // FormMain
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(933, 519);
+            BackColor = SystemColors.AppWorkspace;
+            ClientSize = new Size(534, 446);
             Controls.Add(groupBoxOutput_DDE);
             Controls.Add(groupBoxInput_DDE);
             Controls.Add(groupBoxCondition_DDE);
-            Margin = new Padding(4, 3, 4, 3);
+            MaximizeBox = false;
+            MaximumSize = new Size(550, 485);
+            MinimumSize = new Size(550, 485);
             Name = "FormMain";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Спринт 6 | Таск 3 | Вариант 27 | Дацкий Д. Е.";
+            Load += FormMain_Load;
             groupBoxCondition_DDE.ResumeLayout(false);
             groupBoxCondition_DDE.PerformLayout();
             groupBoxInput_DDE.ResumeLayout(false);
             groupBoxOutput_DDE.ResumeLayout(false);
+            groupBoxOutput_DDE.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewResult_DDE).EndInit();
             ResumeLayout(false);
-
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBoxCondition_DDE;
-        private System.Windows.Forms.Label labelMatrix_DDE;
-        private System.Windows.Forms.GroupBox groupBoxInput_DDE;
-        private System.Windows.Forms.Button buttonHelp_DDE;
-        private System.Windows.Forms.Button buttonCalculate_DDE;
-        private System.Windows.Forms.GroupBox groupBoxOutput_DDE;
-        private System.Windows.Forms.DataGridView dataGridViewResult_DDE;
+        private GroupBox groupBoxCondition_DDE;
+        private TextBox textBoxTask_DDE;
+        private GroupBox groupBoxInput_DDE;
+        private Button buttonHelp_DDE;
+        private Button buttonCalculate_DDE;
+        private GroupBox groupBoxOutput_DDE;
+        private DataGridView dataGridViewResult_DDE;
+        private TextBox textBoxResult_DDE;
     }
 }
