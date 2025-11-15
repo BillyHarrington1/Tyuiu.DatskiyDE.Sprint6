@@ -7,7 +7,7 @@ namespace Tyuiu.DatskiyDE.Sprint6.Task3.V27.Lib
         {
             int rows = matrix.GetLength(0);
             int cols = matrix.GetLength(1);
-
+      
             var rowsWithKey = new (int[] row, int key)[rows];
 
             for (int i = 0; i < rows; i++)
@@ -19,9 +19,9 @@ namespace Tyuiu.DatskiyDE.Sprint6.Task3.V27.Lib
                 }
                 rowsWithKey[i] = (row, matrix[i, 3]); 
             }
-
+  
             Array.Sort(rowsWithKey, (a, b) => a.key.CompareTo(b.key));
-    
+
             int[,] result = new int[rows, cols];
             for (int i = 0; i < rows; i++)
             {
