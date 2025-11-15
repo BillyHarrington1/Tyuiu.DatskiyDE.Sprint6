@@ -8,28 +8,18 @@ namespace Tyuiu.DatskiyDE.Sprint6.Task3.V27.Lib
             int rows = matrix.GetLength(0);
             int cols = matrix.GetLength(1);
 
-     
-            var colsWithKey = new (int[] col, int key)[cols];
-
-            for (int j = 0; j < cols; j++)
-            {
-                int[] col = new int[rows];
-                for (int i = 0; i < rows; i++)
-                {
-                    col[i] = matrix[i, j];
-                }
-                colsWithKey[j] = (col, matrix[3, j]); 
-            }
-    
-            Array.Sort(colsWithKey, (a, b) => a.key.CompareTo(b.key));
-
-       
             int[,] result = new int[rows, cols];
-            for (int j = 0; j < cols; j++)
+
+            for (int i = 0; i < rows; i++)
             {
-                for (int i = 0; i < rows; i++)
+                for (int j = 0; j < cols; j++)
                 {
-                    result[i, j] = colsWithKey[j].col[i];
+                    if (j == 3)
+                        result[i, j] = matrix[i, 4]; // 3-й столбец = 4-й столбец
+                    else if (j == 4)
+                        result[i, j] = matrix[i, 3]; // 4-й столбец = 3-й столбец
+                    else
+                        result[i, j] = matrix[i, j]; // остальные столбцы без изменений
                 }
             }
 

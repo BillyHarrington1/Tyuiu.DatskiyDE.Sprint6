@@ -25,13 +25,13 @@ namespace Tyuiu.DatskiyDE.Sprint6.Task3.V27
             dataGridViewResult_DDE.Rows.Clear();
             dataGridViewResult_DDE.Columns.Clear();
 
-            // Добавляем столбцы
+       
             for (int j = 0; j < 5; j++)
             {
                 dataGridViewResult_DDE.Columns.Add($"Col{j}", $"Колонка {j + 1}");
             }
 
-            // Заполняем таблицу
+        
             for (int i = 0; i < 5; i++)
             {
                 int[] row = new int[5];
