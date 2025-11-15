@@ -8,16 +8,29 @@ namespace Tyuiu.DatskiyDE.Sprint6.Task3.V27.Lib
             int rows = matrix.GetLength(0);
             int cols = matrix.GetLength(1);
 
-            int[,] result = new int[rows, cols];
+            // Создаём массив пар: (значение в 4-й строке, индекс столбца)
+            var valuesAndIndices = new (int value, int colIndex)[cols];
 
-            // Извлекаем 4-й столбец (индекс 3) и сортируем его
-            int[] column3 = new int[rows];
-            for (int i = 0; i < rows; i++)
+            for (int j = 0; j < cols; j++)
             {
-                column3[i] = matrix[i, 3];
+                valuesAndIndices[j] = (matrix[3, j], j);
             }
 
-            Array.Sort(column3); // теперь column3 отсортирован         
+            // Сортируем столбцы по значению в 4-й строке (индекс 3)
+            Array.Sort(valuesAndIndices, (a, b) => a.value.CompareTo(b.value));
+
+            // Создаём результат: переставляем столбцы в новом порядке
+            int[,] result = new int[rows, cols];
+
+            for (int j = 0; j < cols; j++)
+            {
+                int sourceColIndex = valuesAndIndices[j].colIndex;
+                for (int i = 0; i < rows; i++)
+                {
+                    result[i, j] = matrix[i, sourceColIndex];
+                }
+            }
+
             return result;
         }
     }
