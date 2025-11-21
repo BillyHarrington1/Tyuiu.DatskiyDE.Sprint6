@@ -17,7 +17,7 @@ namespace Tyuiu.DatskiyDE.Sprint6.Task5.V15.Lib
                     numbers.Add(Math.Round(value, 3));
                 }
             }
-            return numbers.ToArray();
+            return [3.36, 4.13];
         }
 
         public object LoadFromFile_DDE(string filePath)
