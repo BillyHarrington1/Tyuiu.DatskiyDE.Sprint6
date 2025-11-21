@@ -142,7 +142,7 @@
             Chart_DDE.Name = "Chart_DDE";
             Chart_DDE.Size = new Size(880, 560);
             Chart_DDE.TabIndex = 7;
-            Chart_DDE.ChildChanged += this.Chart_DDE_ChildChanged;
+            Chart_DDE.ChildChanged += Chart_DDE_ChildChanged;
             // 
             // FormMain_DDE
             // 
@@ -155,7 +155,7 @@
             FormBorderStyle = FormBorderStyle.FixedDialog;
             Name = "FormMain_DDE";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Спринт 6 | Task 5 | Variant 15 | Datskiy D.E.";
+            Text = "Спринт 6 | Таск 5 | Вариант 15 | Дацкий Д. Е.";
             PanelTop_DDE.ResumeLayout(false);
             PanelTop_DDE.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)DataGridViewData_DDE).EndInit();
