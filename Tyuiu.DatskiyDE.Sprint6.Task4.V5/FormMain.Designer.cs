@@ -1,4 +1,6 @@
-﻿namespace Tyuiu.DatskiyDE.Sprint6.Task4.V5
+﻿using System.Windows.Forms.Integration;
+
+namespace Tyuiu.DatskiyDE.Sprint6.Task4.V5
 {
     partial class FormMain
     {
@@ -28,120 +30,152 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBoxCondition_DDE = new System.Windows.Forms.GroupBox();
-            this.labelFormula_DDE = new System.Windows.Forms.Label();
-            this.groupBoxInput_DDE = new System.Windows.Forms.GroupBox();
-            this.buttonHelp_DDE = new System.Windows.Forms.Button();
-            this.buttonCalculate_DDE = new System.Windows.Forms.Button();
-            this.buttonSave_DDE = new System.Windows.Forms.Button();
-            this.groupBoxOutput_DDE = new System.Windows.Forms.GroupBox();
-            this.textBoxResult_DDE = new System.Windows.Forms.TextBox();
-            this.cartesianChartResult_DDE = new LiveCharts.WinForms.CartesianChart();
-            this.SuspendLayout();
+            groupBoxCondition_DDE = new GroupBox();
+            labelFormula_DDE = new Label();
+            groupBoxInput_DDE = new GroupBox();
+            buttonHelp_DDE = new Button();
+            buttonCalculate_DDE = new Button();
+            buttonSave_DDE = new Button();
+            groupBoxOutput_DDE = new GroupBox();
+            textBoxResult_DDE = new TextBox();
+            cartesianChartResult_DDE = new LiveCharts.WinForms.CartesianChart();
+            groupBoxCondition_DDE.SuspendLayout();
+            groupBoxInput_DDE.SuspendLayout();
+            groupBoxOutput_DDE.SuspendLayout();
+            SuspendLayout();
             // 
             // groupBoxCondition_DDE
             // 
-            this.groupBoxCondition_DDE.Controls.Add(this.labelFormula_DDE);
-            this.groupBoxCondition_DDE.Location = new System.Drawing.Point(30, 20);
-            this.groupBoxCondition_DDE.Name = "groupBoxCondition_DDE";
-            this.groupBoxCondition_DDE.Size = new System.Drawing.Size(740, 80);
-            this.groupBoxCondition_DDE.TabIndex = 0;
-            this.groupBoxCondition_DDE.TabStop = false;
-            this.groupBoxCondition_DDE.Text = "Условие";
+            groupBoxCondition_DDE.Controls.Add(labelFormula_DDE);
+            groupBoxCondition_DDE.Location = new Point(35, 23);
+            groupBoxCondition_DDE.Margin = new Padding(4, 3, 4, 3);
+            groupBoxCondition_DDE.Name = "groupBoxCondition_DDE";
+            groupBoxCondition_DDE.Padding = new Padding(4, 3, 4, 3);
+            groupBoxCondition_DDE.Size = new Size(863, 92);
+            groupBoxCondition_DDE.TabIndex = 0;
+            groupBoxCondition_DDE.TabStop = false;
+            groupBoxCondition_DDE.Text = "Условие";
             // 
             // labelFormula_DDE
             // 
-            this.labelFormula_DDE.AutoSize = true;
-            this.labelFormula_DDE.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelFormula_DDE.Location = new System.Drawing.Point(30, 30);
-            this.labelFormula_DDE.Name = "labelFormula_DDE";
-            this.labelFormula_DDE.Size = new System.Drawing.Size(300, 20);
-            this.labelFormula_DDE.TabIndex = 0;
-            this.labelFormula_DDE.Text = "F(x) = (2*sin(x))/(3x+1.2) + cos(x) - 14x";
+            labelFormula_DDE.AutoSize = true;
+            labelFormula_DDE.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            labelFormula_DDE.Location = new Point(35, 42);
+            labelFormula_DDE.Margin = new Padding(4, 0, 4, 0);
+            labelFormula_DDE.Name = "labelFormula_DDE";
+            labelFormula_DDE.Size = new Size(273, 20);
+            labelFormula_DDE.TabIndex = 0;
+            labelFormula_DDE.Text = "F(x) = (2*sin(x))/(3x+1.2) + cos(x) - 14x";
             // 
             // groupBoxInput_DDE
             // 
-            this.groupBoxInput_DDE.Controls.Add(this.buttonHelp_DDE);
-            this.groupBoxInput_DDE.Controls.Add(this.buttonCalculate_DDE);
-            this.groupBoxInput_DDE.Controls.Add(this.buttonSave_DDE);
-            this.groupBoxInput_DDE.Location = new System.Drawing.Point(30, 110);
-            this.groupBoxInput_DDE.Name = "groupBoxInput_DDE";
-            this.groupBoxInput_DDE.Size = new System.Drawing.Size(740, 100);
-            this.groupBoxInput_DDE.TabIndex = 1;
-            this.groupBoxInput_DDE.TabStop = false;
-            this.groupBoxInput_DDE.Text = "Ввод данных";
+            groupBoxInput_DDE.Controls.Add(buttonHelp_DDE);
+            groupBoxInput_DDE.Controls.Add(buttonCalculate_DDE);
+            groupBoxInput_DDE.Controls.Add(buttonSave_DDE);
+            groupBoxInput_DDE.Location = new Point(35, 127);
+            groupBoxInput_DDE.Margin = new Padding(4, 3, 4, 3);
+            groupBoxInput_DDE.Name = "groupBoxInput_DDE";
+            groupBoxInput_DDE.Padding = new Padding(4, 3, 4, 3);
+            groupBoxInput_DDE.Size = new Size(863, 115);
+            groupBoxInput_DDE.TabIndex = 1;
+            groupBoxInput_DDE.TabStop = false;
+            groupBoxInput_DDE.Text = "Ввод данных";
             // 
             // buttonHelp_DDE
             // 
-            this.buttonHelp_DDE.Location = new System.Drawing.Point(220, 27);
-            this.buttonHelp_DDE.Name = "buttonHelp_DDE";
-            this.buttonHelp_DDE.Size = new System.Drawing.Size(80, 23);
-            this.buttonHelp_DDE.TabIndex = 0;
-            this.buttonHelp_DDE.Text = "Справка";
-            this.buttonHelp_DDE.UseVisualStyleBackColor = true;
-            this.buttonHelp_DDE.Click += new System.EventHandler(this.buttonHelp_DDE_Click);
+            buttonHelp_DDE.BackColor = Color.FromArgb(128, 128, 255);
+            buttonHelp_DDE.Location = new Point(35, 22);
+            buttonHelp_DDE.Margin = new Padding(4, 3, 4, 3);
+            buttonHelp_DDE.Name = "buttonHelp_DDE";
+            buttonHelp_DDE.Size = new Size(265, 78);
+            buttonHelp_DDE.TabIndex = 0;
+            buttonHelp_DDE.Text = "Справка";
+            buttonHelp_DDE.UseVisualStyleBackColor = false;
+            buttonHelp_DDE.Click += buttonHelp_DDE_Click;
             // 
             // buttonCalculate_DDE
             // 
-            this.buttonCalculate_DDE.Location = new System.Drawing.Point(320, 27);
-            this.buttonCalculate_DDE.Name = "buttonCalculate_DDE";
-            this.buttonCalculate_DDE.Size = new System.Drawing.Size(80, 23);
-            this.buttonCalculate_DDE.TabIndex = 1;
-            this.buttonCalculate_DDE.Text = "Выполнить";
-            this.buttonCalculate_DDE.UseVisualStyleBackColor = true;
-            this.buttonCalculate_DDE.Click += new System.EventHandler(this.buttonCalculate_DDE_Click);
+            buttonCalculate_DDE.BackColor = SystemColors.Highlight;
+            buttonCalculate_DDE.Location = new Point(308, 22);
+            buttonCalculate_DDE.Margin = new Padding(4, 3, 4, 3);
+            buttonCalculate_DDE.Name = "buttonCalculate_DDE";
+            buttonCalculate_DDE.Size = new Size(256, 78);
+            buttonCalculate_DDE.TabIndex = 1;
+            buttonCalculate_DDE.Text = "Выполнить";
+            buttonCalculate_DDE.UseVisualStyleBackColor = false;
+            buttonCalculate_DDE.Click += buttonCalculate_DDE_Click;
             // 
             // buttonSave_DDE
             // 
-            this.buttonSave_DDE.Location = new System.Drawing.Point(420, 27);
-            this.buttonSave_DDE.Name = "buttonSave_DDE";
-            this.buttonSave_DDE.Size = new System.Drawing.Size(80, 23);
-            this.buttonSave_DDE.TabIndex = 2;
-            this.buttonSave_DDE.Text = "Сохранить";
-            this.buttonSave_DDE.UseVisualStyleBackColor = true;
-            this.buttonSave_DDE.Click += new System.EventHandler(this.buttonSave_DDE_Click);
+            buttonSave_DDE.BackColor = SystemColors.Desktop;
+            buttonSave_DDE.Location = new Point(572, 22);
+            buttonSave_DDE.Margin = new Padding(4, 3, 4, 3);
+            buttonSave_DDE.Name = "buttonSave_DDE";
+            buttonSave_DDE.Size = new Size(267, 78);
+            buttonSave_DDE.TabIndex = 2;
+            buttonSave_DDE.Text = "Сохранить";
+            buttonSave_DDE.UseVisualStyleBackColor = false;
+            buttonSave_DDE.Click += buttonSave_DDE_Click;
             // 
             // groupBoxOutput_DDE
             // 
-            this.groupBoxOutput_DDE.Controls.Add(this.textBoxResult_DDE);
-            this.groupBoxOutput_DDE.Controls.Add(this.cartesianChartResult_DDE);
-            this.groupBoxOutput_DDE.Location = new System.Drawing.Point(30, 220);
-            this.groupBoxOutput_DDE.Name = "groupBoxOutput_DDE";
-            this.groupBoxOutput_DDE.Size = new System.Drawing.Size(740, 200);
-            this.groupBoxOutput_DDE.TabIndex = 2;
-            this.groupBoxOutput_DDE.TabStop = false;
-            this.groupBoxOutput_DDE.Text = "Вывод данных";
+            groupBoxOutput_DDE.Controls.Add(textBoxResult_DDE);
+            groupBoxOutput_DDE.Controls.Add(cartesianChartResult_DDE);
+            groupBoxOutput_DDE.Location = new Point(35, 254);
+            groupBoxOutput_DDE.Margin = new Padding(4, 3, 4, 3);
+            groupBoxOutput_DDE.Name = "groupBoxOutput_DDE";
+            groupBoxOutput_DDE.Padding = new Padding(4, 3, 4, 3);
+            groupBoxOutput_DDE.Size = new Size(863, 231);
+            groupBoxOutput_DDE.TabIndex = 2;
+            groupBoxOutput_DDE.TabStop = false;
+            groupBoxOutput_DDE.Text = "Вывод данных";
             // 
             // textBoxResult_DDE
             // 
-            this.textBoxResult_DDE.Location = new System.Drawing.Point(30, 30);
-            this.textBoxResult_DDE.Multiline = true;
-            this.textBoxResult_DDE.Name = "textBoxResult_DDE";
-            this.textBoxResult_DDE.ReadOnly = true;
-            this.textBoxResult_DDE.Size = new System.Drawing.Size(300, 150);
-            this.textBoxResult_DDE.TabIndex = 0;
+            textBoxResult_DDE.BackColor = Color.IndianRed;
+            textBoxResult_DDE.Location = new Point(35, 35);
+            textBoxResult_DDE.Margin = new Padding(4, 3, 4, 3);
+            textBoxResult_DDE.Multiline = true;
+            textBoxResult_DDE.Name = "textBoxResult_DDE";
+            textBoxResult_DDE.ReadOnly = true;
+            textBoxResult_DDE.Size = new Size(349, 172);
+            textBoxResult_DDE.TabIndex = 0;
             // 
             // cartesianChartResult_DDE
             // 
-            this.cartesianChartResult_DDE.Location = new System.Drawing.Point(350, 30);
-            this.cartesianChartResult_DDE.Name = "cartesianChartResult_DDE";
-            this.cartesianChartResult_DDE.Size = new System.Drawing.Size(350, 150);
-            this.cartesianChartResult_DDE.TabIndex = 1;
-            this.cartesianChartResult_DDE.Text = "cartesianChart1";
+            cartesianChartResult_DDE.BackColor = Color.IndianRed;
+            cartesianChartResult_DDE.Location = new Point(457, 35);
+            cartesianChartResult_DDE.Margin = new Padding(4, 3, 4, 3);
+            cartesianChartResult_DDE.Name = "cartesianChartResult_DDE";
+            cartesianChartResult_DDE.Size = new Size(359, 173);
+            cartesianChartResult_DDE.TabIndex = 1;
+            cartesianChartResult_DDE.Text = "cartesianChart_DDE";
+            cartesianChartResult_DDE.ChildChanged += cartesianChartResult_DDE_ChildChanged;
             // 
             // FormMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.groupBoxOutput_DDE);
-            this.Controls.Add(this.groupBoxInput_DDE);
-            this.Controls.Add(this.groupBoxCondition_DDE);
-            this.Name = "FormMain";
-            this.Text = "Спринт 6 | Task 4 | Вариант 5 | Дацкий Д. Е.";
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.Pink;
+            ClientSize = new Size(933, 519);
+            Controls.Add(groupBoxOutput_DDE);
+            Controls.Add(groupBoxInput_DDE);
+            Controls.Add(groupBoxCondition_DDE);
+            Margin = new Padding(4, 3, 4, 3);
+            Name = "FormMain";
+            Text = "Спринт 6 | Task 4 | Вариант 5 | Дацкий Д. Е.";
+            groupBoxCondition_DDE.ResumeLayout(false);
+            groupBoxCondition_DDE.PerformLayout();
+            groupBoxInput_DDE.ResumeLayout(false);
+            groupBoxOutput_DDE.ResumeLayout(false);
+            groupBoxOutput_DDE.PerformLayout();
+            ResumeLayout(false);
 
+        }
+
+        private void cartesianChartResult_DDE_ChildChanged(object sender, ChildChangedEventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         #endregion

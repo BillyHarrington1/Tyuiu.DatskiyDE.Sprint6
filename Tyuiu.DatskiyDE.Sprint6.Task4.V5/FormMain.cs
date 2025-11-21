@@ -26,26 +26,24 @@ namespace Tyuiu.DatskiyDE.Sprint6.Task4.V5
 
                 double[] values = ds.GetMassFunction(startValue, stopValue);
 
-                string table = "+-----+--------+\n";
-                table += "|  X  |  f(x)  |\n";
-                table += "+-----+--------+\n";
+                string table = "";
+                
 
                 for (int i = 0; i < values.Length; i++)
                 {
                     int x = startValue + i;
-                    table += $"| {x,3} | {values[i],6:F2} |\n";
+                    table += $"| {x,3} | {values[i],6:F2}";
                 }
 
-                table += "+-----+--------+";
+                
 
                 textBoxResult_DDE.Text = table;
-
-                // Построение графика с LiveCharts
+            
                 var series = new LineSeries
                 {
                     Values = new ChartValues<double>(),
                     PointGeometrySize = 0,
-                    StrokeThickness = 2,             
+                    StrokeThickness = 2,
                 };
 
                 for (int i = 0; i < values.Length; i++)
@@ -56,15 +54,10 @@ namespace Tyuiu.DatskiyDE.Sprint6.Task4.V5
 
                 cartesianChartResult_DDE.Series.Clear();
                 cartesianChartResult_DDE.Series.Add(series);
-
-                // Настройка осей
                 cartesianChartResult_DDE.AxisX.Clear();
                 cartesianChartResult_DDE.AxisY.Clear();
-
                 cartesianChartResult_DDE.AxisX.Add(new Axis { Title = "X", MinValue = -6, MaxValue = 6 });
                 cartesianChartResult_DDE.AxisY.Add(new Axis { Title = "f(x)", MinValue = -100, MaxValue = 100 });
-
-                // Обновляем график
                 cartesianChartResult_DDE.Update();
             }
             catch (Exception ex)
@@ -102,7 +95,7 @@ namespace Tyuiu.DatskiyDE.Sprint6.Task4.V5
 
         private void buttonHelp_DDE_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Табулировать функцию F(x) = (2*sin(x))/(3x+1.2) + cos(x) - 14x\nна диапазоне [-5, 5] с шагом 1.");
+            MessageBox.Show("Выполнил студент группы ИСПб-25-1 Дацкий Денис Евгеньевич");
         }
     }
 }
