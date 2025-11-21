@@ -8,4 +8,13 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="LiveCharts.WinForms.NetCore3" Version="0.9.8" />
+    <PackageReference Include="winforms.datavisualization" Version="1.10.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Tyuiu.DatskiyDE.Sprint6.Task4.V5.Lib\Tyuiu.DatskiyDE.Sprint6.Task4.V5.Lib.csproj" />
+  </ItemGroup>
+
 </Project>
