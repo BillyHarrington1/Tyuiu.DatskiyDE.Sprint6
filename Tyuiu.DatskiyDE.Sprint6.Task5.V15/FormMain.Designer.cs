@@ -34,7 +34,7 @@
             // 
             // PanelTop_DDE
             // 
-            PanelTop_DDE.BackColor = Color.WhiteSmoke;
+            PanelTop_DDE.BackColor = Color.DimGray;
             PanelTop_DDE.Controls.Add(LabelTitle_DDE);
             PanelTop_DDE.Controls.Add(ButtonRun_DDE);
             PanelTop_DDE.Controls.Add(ButtonOpenFile_DDE);
@@ -60,6 +60,7 @@
             // ButtonRun_DDE
             // 
             ButtonRun_DDE.BackColor = Color.PaleGreen;
+            ButtonRun_DDE.Cursor = Cursors.Hand;
             ButtonRun_DDE.FlatStyle = FlatStyle.Popup;
             ButtonRun_DDE.Location = new Point(720, 20);
             ButtonRun_DDE.Name = "ButtonRun_DDE";
@@ -72,6 +73,7 @@
             // ButtonOpenFile_DDE
             // 
             ButtonOpenFile_DDE.BackColor = Color.LightSteelBlue;
+            ButtonOpenFile_DDE.Cursor = Cursors.Hand;
             ButtonOpenFile_DDE.FlatStyle = FlatStyle.Popup;
             ButtonOpenFile_DDE.Location = new Point(580, 50);
             ButtonOpenFile_DDE.Name = "ButtonOpenFile_DDE";
@@ -84,6 +86,7 @@
             // ButtonHelp_DDE
             // 
             ButtonHelp_DDE.BackColor = Color.LightBlue;
+            ButtonHelp_DDE.Cursor = Cursors.Hand;
             ButtonHelp_DDE.FlatStyle = FlatStyle.Popup;
             ButtonHelp_DDE.Location = new Point(850, 20);
             ButtonHelp_DDE.Name = "ButtonHelp_DDE";
@@ -95,6 +98,8 @@
             // 
             // TextBoxPath_DDE
             // 
+            TextBoxPath_DDE.BackColor = SystemColors.ControlLightLight;
+            TextBoxPath_DDE.BorderStyle = BorderStyle.FixedSingle;
             TextBoxPath_DDE.Location = new Point(110, 52);
             TextBoxPath_DDE.Name = "TextBoxPath_DDE";
             TextBoxPath_DDE.Size = new Size(450, 23);
@@ -113,6 +118,7 @@
             // 
             DataGridViewData_DDE.AllowUserToAddRows = false;
             DataGridViewData_DDE.AllowUserToDeleteRows = false;
+            DataGridViewData_DDE.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             DataGridViewData_DDE.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             DataGridViewData_DDE.Columns.AddRange(new DataGridViewColumn[] { ColIndex_DDE, ColValue_DDE });
             DataGridViewData_DDE.Location = new Point(20, 120);
@@ -127,17 +133,16 @@
             ColIndex_DDE.HeaderText = "Index";
             ColIndex_DDE.Name = "ColIndex_DDE";
             ColIndex_DDE.ReadOnly = true;
-            ColIndex_DDE.Width = 60;
             // 
             // ColValue_DDE
             // 
             ColValue_DDE.HeaderText = "Value";
             ColValue_DDE.Name = "ColValue_DDE";
             ColValue_DDE.ReadOnly = true;
-            ColValue_DDE.Width = 120;
             // 
             // Chart_DDE
             // 
+            Chart_DDE.BackColor = Color.DarkSeaGreen;
             Chart_DDE.Location = new Point(300, 120);
             Chart_DDE.Name = "Chart_DDE";
             Chart_DDE.Size = new Size(880, 560);
@@ -148,6 +153,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.DimGray;
             ClientSize = new Size(1200, 700);
             Controls.Add(Chart_DDE);
             Controls.Add(DataGridViewData_DDE);
@@ -172,11 +178,9 @@
         private System.Windows.Forms.Button ButtonHelp_DDE;
         private System.Windows.Forms.TextBox TextBoxPath_DDE;
         private System.Windows.Forms.Label LabelPath_DDE;
-
         private System.Windows.Forms.DataGridView DataGridViewData_DDE;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColIndex_DDE;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColValue_DDE;
-
         private LiveCharts.WinForms.CartesianChart Chart_DDE;
     }
 }
