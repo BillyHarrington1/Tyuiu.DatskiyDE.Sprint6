@@ -1,6 +1,4 @@
 ﻿using tyuiu.cources.programming.interfaces.Sprint6;
-using System;
-using System.IO;
 
 namespace Tyuiu.DatskiyDE.Sprint6.Task7.V5.Lib
 {
@@ -8,16 +6,20 @@ namespace Tyuiu.DatskiyDE.Sprint6.Task7.V5.Lib
     {
         public int[,] GetMatrix(string path)
         {
+         
             string[] lines = File.ReadAllLines(path);
 
-          
+         
             lines = Array.FindAll(lines, l => !string.IsNullOrWhiteSpace(l));
 
             int rows = lines.Length;
-            int cols = lines[0].Split(';', StringSplitOptions.RemoveEmptyEntries).Length;
+            int cols = lines[0]
+                .Split(';', StringSplitOptions.RemoveEmptyEntries)
+                .Length;
 
             int[,] matrix = new int[rows, cols];
 
+    
             for (int i = 0; i < rows; i++)
             {
                 string[] parts = lines[i]
@@ -30,9 +32,16 @@ namespace Tyuiu.DatskiyDE.Sprint6.Task7.V5.Lib
                 }
             }
 
+      
+            int lastCol = cols - 1;
+
+            for (int i = 0; i < rows; i++)
+            {
+                if (matrix[i, lastCol] < 2)
+                    matrix[i, lastCol] = 2;
+            }
+
             return matrix;
         }
-
-       
     }
 }
