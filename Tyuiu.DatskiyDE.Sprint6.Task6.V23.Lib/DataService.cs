@@ -1,4 +1,6 @@
-﻿using tyuiu.cources.programming.interfaces.Sprint6;
+﻿using System.Text;
+using tyuiu.cources.programming.interfaces.Sprint6;
+
 namespace Tyuiu.DatskiyDE.Sprint6.Task6.V23.Lib
 {
     public class DataService : ISprint6Task6V23
@@ -7,7 +9,7 @@ namespace Tyuiu.DatskiyDE.Sprint6.Task6.V23.Lib
         {
             try
             {
-                string result = "";
+                StringBuilder result = new StringBuilder();
 
                 if (!File.Exists(path))
                 {
@@ -17,25 +19,26 @@ namespace Tyuiu.DatskiyDE.Sprint6.Task6.V23.Lib
                 string[] lines = File.ReadAllLines(path);
 
                 foreach (string line in lines)
-                {             
-                    string[] words = line.Split(new char[] { ' ', ',', '.', '!', '?', ';', ':', '\t' },
-                                              StringSplitOptions.RemoveEmptyEntries);
+                {
+              
+                    string[] words = line.Split(new char[] { ' ', ',', '.', '!', '?', ';', ':', '\t', '\r', '\n', '(', ')', '[', ']', '{', '}', '"', '\'' },
+                    StringSplitOptions.RemoveEmptyEntries);
 
                     foreach (string word in words)
                     {
-                        if (word.IndexOf('s', StringComparison.OrdinalIgnoreCase) >= 0 ||
-                            word.IndexOf('s', StringComparison.OrdinalIgnoreCase) >= 0)
+                    
+                        if (word.Equals("s", StringComparison.OrdinalIgnoreCase))
                         {
-                            if (!string.IsNullOrEmpty(result))
+                            if (result.Length > 0)
                             {
-                                result += " ";
+                                result.Append(" ");
                             }
-                            result += word;
+                            result.Append("s");
                         }
                     }
                 }
 
-                return result;
+                return result.ToString();
             }
             catch (Exception ex)
             {
