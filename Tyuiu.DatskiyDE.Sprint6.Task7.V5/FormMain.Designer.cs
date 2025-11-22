@@ -105,7 +105,7 @@
             // 
             buttonSave_ToolStripButton_DDE.BackgroundImageLayout = ImageLayout.None;
             buttonSave_ToolStripButton_DDE.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            buttonSave_ToolStripButton_DDE.Image = Properties.Resources.icons8_сохранить_80;
+            buttonSave_ToolStripButton_DDE.Image = (Image)resources.GetObject("buttonSave_ToolStripButton_DDE.Image");
             buttonSave_ToolStripButton_DDE.Name = "buttonSave_ToolStripButton_DDE";
             buttonSave_ToolStripButton_DDE.Size = new Size(76, 76);
             buttonSave_ToolStripButton_DDE.Text = "Сохранить";
@@ -124,7 +124,7 @@
             // buttonOpen_ToolStripButton_DDE
             // 
             buttonOpen_ToolStripButton_DDE.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            buttonOpen_ToolStripButton_DDE.Image = Properties.Resources.icons8_открыть_папку_100;
+            buttonOpen_ToolStripButton_DDE.Image = (Image)resources.GetObject("buttonOpen_ToolStripButton_DDE.Image");
             buttonOpen_ToolStripButton_DDE.Name = "buttonOpen_ToolStripButton_DDE";
             buttonOpen_ToolStripButton_DDE.Size = new Size(76, 76);
             buttonOpen_ToolStripButton_DDE.Text = "Открыть";
