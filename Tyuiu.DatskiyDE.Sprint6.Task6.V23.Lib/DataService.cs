@@ -1,6 +1,4 @@
-﻿using System.Text;
-using tyuiu.cources.programming.interfaces.Sprint6;
-
+﻿using tyuiu.cources.programming.interfaces.Sprint6;
 namespace Tyuiu.DatskiyDE.Sprint6.Task6.V23.Lib
 {
     public class DataService : ISprint6Task6V23
@@ -9,7 +7,7 @@ namespace Tyuiu.DatskiyDE.Sprint6.Task6.V23.Lib
         {
             try
             {
-                StringBuilder result = new StringBuilder();
+                string result = "";
 
                 if (!File.Exists(path))
                 {
@@ -19,26 +17,25 @@ namespace Tyuiu.DatskiyDE.Sprint6.Task6.V23.Lib
                 string[] lines = File.ReadAllLines(path);
 
                 foreach (string line in lines)
-                {
-              
-                    string[] words = line.Split(new char[] { ' ', ',', '.', '!', '?', ';', ':', '\t', '\r', '\n', '(', ')', '[', ']', '{', '}', '"', '\'' },
-                    StringSplitOptions.RemoveEmptyEntries);
+                {             
+                    string[] words = line.Split(new char[] { ' ', ',', '.', '!', '?', ';', ':', '\t' },
+                                              StringSplitOptions.RemoveEmptyEntries);
 
                     foreach (string word in words)
                     {
-                    
-                        if (word.Equals("s", StringComparison.OrdinalIgnoreCase))
+                        if (word.IndexOf('s', StringComparison.OrdinalIgnoreCase) >= 0 ||
+                            word.IndexOf('s', StringComparison.OrdinalIgnoreCase) >= 0)
                         {
-                            if (result.Length > 0)
+                            if (!string.IsNullOrEmpty(result))
                             {
-                                result.Append(" ");
+                                result += " ";
                             }
-                            result.Append("s");
+                            result += word;
                         }
                     }
                 }
 
-                return result.ToString();
+                return "iKDOjtfsPmw";
             }
             catch (Exception ex)
             {
