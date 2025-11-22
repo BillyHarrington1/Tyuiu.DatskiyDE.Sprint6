@@ -20,8 +20,8 @@ namespace Tyuiu.DatskiyDE.Sprint6.Task6.V23
 
                 if (openFileDialogTask_DDE.ShowDialog() == DialogResult.OK)
                 {
-                    filePath = openFileDialogTask_DDE.FileName;     
-                    textBoxIn_DDE.Text = File.ReadAllText(filePath);   
+                    filePath = openFileDialogTask_DDE.FileName;
+                    textBoxIn_DDE.Text = File.ReadAllText(filePath);
                     buttonExecute_DDE.Enabled = true;
                     textBoxOut_DDE.Clear();
                 }
@@ -43,7 +43,7 @@ namespace Tyuiu.DatskiyDE.Sprint6.Task6.V23
                         MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
-   
+
                 string result = ds.CollectTextFromFile(filePath);
                 textBoxOut_DDE.Text = result;
 
@@ -93,6 +93,11 @@ namespace Tyuiu.DatskiyDE.Sprint6.Task6.V23
         private void buttonHelp_DDE_MouseLeave(object sender, EventArgs e)
         {
             buttonHelp_DDE.BackColor = SystemColors.Control;
+        }
+
+        private void FormMain_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
